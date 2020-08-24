@@ -50,7 +50,7 @@ We can generate a grocery list of a specific size using the max_depth method. Bu
 item in our cart to generate recommendations, so, we will place a banana into our cart to see what is recommended. 
 
 ```python 
-print(graph.max_depth(frequented[0][0],5)) ## pass the banana node object 
+print(graph.max_depth(frequented[0][0],10)) ## pass the banana node object 
 ## [24852, 10305, 29941, 25340, 22169, 22142, 43789, 39858, 13176, 11526]
 ## [banana, black plum, red plums,large yellow flesh nectarine,pineapple slices,
 ##  100% pure pumpkin,organic basil,hydrogen peroxide,bag of organic bananas,
