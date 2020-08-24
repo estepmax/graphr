@@ -56,7 +56,7 @@ print(graph.max_depth(frequented[0][0],5)) ## pass the banana node object
 ##  100% pure pumpkin,organic basil,hydrogen peroxide,bag of organic bananas,
 #   napa cabbage]
 ```
-Why is hydrogen peroxide is recommended?
+Why is hydrogen peroxide recommended?
 
 Oh, apparently it is used to wash produce according to this article: https://www.dallasnews.com/food/cooking/2019/01/19/how-to-properly-clean-your-fruits-and-vegetables-the-organic-way/
 
