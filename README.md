@@ -62,4 +62,6 @@ Oh, apparently it is used to wash produce according to this article: https://www
 
 I had no idea......
 
-TO BE CONTINUED
+### A visualization for 20 Shopping Carts as a graph
+
+![20_cart_graph](https://github.com/estepmax/graphr/blob/master/screenshots/20_Cart_Graph.png)
