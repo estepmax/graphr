@@ -10,36 +10,32 @@ Instacart data: https://www.kaggle.com/c/instacart-market-basket-analysis
 
 ## Gatherting data + initializing recommendation graph + calculating weights 
 ```python
-def main():
+## Gathering Data 
 
-    ## Gathering Data 
+import pandas as pd 
+path = "E:/Downloads/order_products__train.csv"
 
-    import pandas as pd 
-    path = "E:/Downloads/order_products__train.csv"
+data = pd.read_csv(path)
+order_id = list(set(data["order_id"]))
+number_of_orders = order_id[0:1000] ## will only look at 1000 carts
 
-    data = pd.read_csv(path)
-    order_id = list(set(data["order_id"]))
-    number_of_orders = order_id[0:1000] ## will only look at 1000 orders 
-
-    orders = list()
-    for order in number_of_orders:
-        product_list = list(data[data.order_id == order].product_id)
-        if len(product_list):
-            orders.append(product_list)
+orders = list()
+for order in number_of_orders:
+    product_list = list(data[data.order_id == order].product_id)
+    if len(product_list):
+        orders.append(product_list)
     
-    ## Initializing Recommendation Graph
+## Initializing Recommendation Graph
 
-    graph = GraphR()
+graph = GraphR()
 
-    for chain in orders:
-        graph.insert_chained_edges(chain)
+for chain in orders:
+    graph.insert_chained_edges(chain)
 
-    ## Calculating weights
+## Calculating weights
 
-    graph.node_weights() ## parent weights
-    graph.child_node_weights() ## child weights
-
-main()
+graph.node_weights() ## parent weights
+graph.child_node_weights() ## child weights
 ```
 A great artifact of generating the recommendation graph and calculating the weights is that you can query the most frequented products right away. 
 
