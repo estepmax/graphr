@@ -1,5 +1,5 @@
 ### GraphR: Graph Based Recommendation
-This is a quick and dirty graph based recommendation system for experimentation.
+This is a quick and dirty graph based recommendation system for experimentation with sequence data.
 
 ### Example
 I will be using Instacart shopping cart data  to construct the recommendation graph. We can think
